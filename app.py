@@ -48,6 +48,6 @@ prediction = model.predict(input_transformed)
 prediction_proba = prediction[0][0]
 st.write(f"Churn Probability: {prediction_proba:.2f}")
 if prediction_proba>0.5:
-    st.write('The Customer is likely to Churn.')
+       st.error("Prediction: Customer is likely to leave 😢")
 else:
-    st.write('The Customer is not likely to Churn')
+    st.success("Prediction: Customer is likely to stay 😊")
